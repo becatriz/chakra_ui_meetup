@@ -4,7 +4,7 @@ export const Header = chakra('header', {
   baseStyle: {
     shadow: 'lg',
     width: '100%',
-    height: '50px',
+    height: '100px',
     bg: 'gray.900'
   }
 });

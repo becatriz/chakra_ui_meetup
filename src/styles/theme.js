@@ -1,6 +1,20 @@
 import { extendTheme } from '@chakra-ui/react';
 
+const breakPoints = {
+  breakPoints: {
+    sm: '40em',
+    md: '52em',
+    lg: '64em',
+    xl: '80em'
+  }
+};
+
 export const theme = extendTheme({
+  breakPoints,
+  config: {
+    initialColorMode: 'light',
+    useSystemColorMode: false
+  },
   colors: {
     gray: {
       900: '#181B23',
@@ -15,16 +29,9 @@ export const theme = extendTheme({
       50: '#EEEEF2'
     }
   },
+
   fonts: {
     heading: 'Roboto',
     body: 'Roboto'
-  },
-  styles: {
-    global: {
-      body: {
-        bg: 'gray.100',
-        color: 'gray.50'
-      }
-    }
   }
 });
