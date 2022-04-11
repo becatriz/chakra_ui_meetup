@@ -1,7 +1,6 @@
 import { useColorMode, Switch, Flex, Button, IconButton, Link } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { Header } from './components/Header';
-import { Form } from './components/Form/Form';
+import { Header } from '../Header';
 
 function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -40,7 +39,6 @@ function Home() {
           </Flex>
         </Flex>
       </Header>
-      <Form />
     </>
   );
 }

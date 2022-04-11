@@ -1,15 +1,20 @@
-import { chakra } from '@chakra-ui/react';
+import { chakra, shouldForwardProp } from '@chakra-ui/react';
 
-export const Input = chakra('button', {
+export const Input = chakra('input', {
+  shouldForwardProp: (prop) => {
+    const isChakraProp = !shouldForwardProp(prop);
+
+    if (isChakraProp) return false;
+
+    return ['simple'].includes(prop);
+  },
   baseStyle: {
-    width: '100px',
+    width: '100%',
     height: '50px',
-    bg: 'gray.50',
+    bg: 'gray.300',
     borderRadius: 'md',
-    variant: 'outline',
     _hover: {
-      background: 'gray.300',
-      color: 'gray.900'
+      background: 'gray.500'
     }
   }
 });
